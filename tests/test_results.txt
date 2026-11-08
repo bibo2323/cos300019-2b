@@ -1,0 +1,27 @@
+C:\Users\User\Documents\GitHub\cos300019 2b\data_processing.py:40: Pandas4Warning: The xlrd engine is deprecated and will be removed in a future version. Use the calamine engine instead, by setting engine='calamine'.
+  df = pd.read_excel(path, sheet_name="Data", header=1)
+test_T01_forty_sites_thirty_one_days (__main__.TestDataProcessing.test_T01_forty_sites_thirty_one_days) ... ok
+test_T02_duplicates_removed (__main__.TestDataProcessing.test_T02_duplicates_removed) ... ok
+test_T03_every_site_day_has_96_intervals (__main__.TestDataProcessing.test_T03_every_site_day_has_96_intervals) ... ok
+test_T04_no_negative_or_missing_flow (__main__.TestDataProcessing.test_T04_no_negative_or_missing_flow) ... ok
+test_T05_hourly_is_sum_of_four_15min_slots (__main__.TestDataProcessing.test_T05_hourly_is_sum_of_four_15min_slots) ... ok
+test_T06_site_coordinates_are_inside_boroondara (__main__.TestDataProcessing.test_T06_site_coordinates_are_inside_boroondara) ... ok
+C:\Users\User\Documents\GitHub\cos300019 2b\data_processing.py:40: Pandas4Warning: The xlrd engine is deprecated and will be removed in a future version. Use the calamine engine instead, by setting engine='calamine'.
+  df = pd.read_excel(path, sheet_name="Data", header=1)
+test_T14_all_forty_sites_are_in_the_graph (__main__.TestRoadMap.test_T14_all_forty_sites_are_in_the_graph) ... ok
+test_T15_graph_is_one_connected_part (__main__.TestRoadMap.test_T15_graph_is_one_connected_part) ... ok
+test_T16_every_link_works_in_both_directions (__main__.TestRoadMap.test_T16_every_link_works_in_both_directions) ... ok
+test_T17_route_exists_from_2000_to_3002 (__main__.TestRoadMap.test_T17_route_exists_from_2000_to_3002) ... ok
+test_T18_distances_are_positive_and_realistic (__main__.TestRoadMap.test_T18_distances_are_positive_and_realistic) ... ok
+test_T07_low_flow_gives_speed_limit (__main__.TestTravelTime.test_T07_low_flow_gives_speed_limit) ... ok
+test_T08_medium_flow_is_slower_than_free_flow (__main__.TestTravelTime.test_T08_medium_flow_is_slower_than_free_flow) ... ok
+test_T09_flow_above_capacity_is_treated_as_capacity (__main__.TestTravelTime.test_T09_flow_above_capacity_is_treated_as_capacity) ... ok
+test_T10_zero_distance_costs_only_the_intersection_delay (__main__.TestTravelTime.test_T10_zero_distance_costs_only_the_intersection_delay) ... ok
+test_T11_travel_time_never_decreases_when_flow_increases (__main__.TestTravelTime.test_T11_travel_time_never_decreases_when_flow_increases) ... ok
+test_T12_distance_between_sites_2000_and_3002 (__main__.TestTravelTime.test_T12_distance_between_sites_2000_and_3002) ... ok
+test_T13_negative_flow_is_treated_as_zero (__main__.TestTravelTime.test_T13_negative_flow_is_treated_as_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.975s
+
+OK
