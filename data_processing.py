@@ -28,6 +28,9 @@ VOLUME_COLUMNS = ["V%02d" % i for i in range(INTERVALS_PER_DAY)]   # V00 ... V95
 # Each SCATS site has several detectors (one per approach road). A site's
 # traffic is the SUM over its approaches, i.e. all cars passing the intersection.
 SITE_AGGREGATION = "sum"
+# Valid coordinate box (Victoria). Anything outside, e.g. (0, 0), is a data error.
+LAT_RANGE = (-39.0, -36.0)
+LON_RANGE = (143.0, 147.0)
 # ---------------------------------------------------------------------------
 
 
@@ -71,11 +74,14 @@ def clean_raw(df):
 def build_sites(df):
     """One row per site with a representative name and coordinates (mean of its
     detectors, because each detector has a slightly different lat/lon)."""
-    sites = (df.groupby("site")
-               .agg(lat=("lat", "mean"), lon=("lon", "mean"),
-                    n_approaches=("location", "nunique"),
-                    name=("location", "first"))
-               .reset_index())
+    # One detector (site 4266) has coordinates (0, 0). Ignore any coordinate
+    # that is not inside Victoria before averaging.
+    good = df[(df["lat"].between(LAT_RANGE[0], LAT_RANGE[1])) &
+              (df["lon"].between(LON_RANGE[0], LON_RANGE[1]))]
+    coords = good.groupby("site").agg(lat=("lat", "mean"), lon=("lon", "mean"))
+    info = (df.groupby("site")
+              .agg(n_approaches=("location", "nunique"), name=("location", "first")))
+    sites = info.join(coords).reset_index()
     return sites
 
 
