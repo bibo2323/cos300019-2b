@@ -12,7 +12,9 @@ connected, so we build the links ourselves (assumptions are listed below):
           road name are lined up along that road (sorted by position) and each
           site is linked to its next neighbour on that road.
   Rule 2 (isolated sites): a site that shares no road with any other site is
-          linked to its 2 nearest sites (marked kind='assumed').
+          LEFT UNCONNECTED (the tutor confirmed isolated sites are allowed).
+          Set LINK_ISOLATED_SITES = True below to link them to their nearest
+          sites instead (kind='assumed').
   Every link is two-way (cars can drive both directions).
   Distance = straight-line (haversine) distance between the two sites.
 
@@ -30,7 +32,8 @@ from data_processing import read_raw, load_sites, OUT_DIR
 from travel_time import haversine_km
 
 EDGES_FILE = os.path.join(OUT_DIR, "edges.csv")
-NEAREST_LINKS_FOR_ISOLATED = 2          # Rule 2: how many neighbours to add
+LINK_ISOLATED_SITES = False             # tutor: not connected = not connected
+NEAREST_LINKS_FOR_ISOLATED = 2          # only used when LINK_ISOLATED_SITES is True
 
 # "WARRIGAL_RD N of HIGH STREET_RD"  ->  road 1, direction, road 2
 _LOCATION = re.compile(r"^(.*?)\s+(N|S|E|W|NE|NW|SE|SW)\s+of\s+(.*)$", re.I)
@@ -77,7 +80,7 @@ def build_edges(sites=None, raw=None):
 
     # Rule 2: connect isolated sites to their nearest neighbours
     linked = {s for pair in links for s in pair}
-    for site in pos.index:
+    for site in (pos.index if LINK_ISOLATED_SITES else []):
         if site in linked:
             continue
         dist = {other: haversine_km(pos.loc[site, "lat"], pos.loc[site, "lon"],
@@ -107,9 +110,10 @@ def load_edges(path=EDGES_FILE):
 
 def build_adjacency(edges=None):
     """{site: {neighbour: distance_km}} with BOTH directions of every link.
+    Isolated sites are included with no neighbours.
     This is what the search code (2A) uses to expand a node."""
     edges = load_edges() if edges is None else edges
-    adj = {}
+    adj = {int(s): {} for s in load_sites()["site"]}
     for a, b, d in edges[["a", "b", "distance_km"]].itertuples(index=False):
         adj.setdefault(int(a), {})[int(b)] = float(d)
         adj.setdefault(int(b), {})[int(a)] = float(d)
@@ -139,7 +143,9 @@ def main():
     adj = build_adjacency(edges)
     parts = connected_components(adj)
     print("Road map built.")
-    print("  sites with links : %d" % len(adj))
+    isolated = sorted(s for s, n in adj.items() if not n)
+    print("  sites in the map : %d" % len(adj))
+    print("  isolated sites   : %s" % (isolated or "none"))
     print("  links (two-way)  : %d  (%d from shared roads, %d assumed)"
           % (len(edges), (edges["kind"] == "road").sum(), (edges["kind"] == "assumed").sum()))
     print("  separate parts   : %d" % len(parts))

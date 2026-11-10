@@ -105,8 +105,14 @@ class TestRoadMap(unittest.TestCase):
     def test_T14_all_forty_sites_are_in_the_graph(self):
         self.assertEqual(len(self.adj), 40)
 
-    def test_T15_graph_is_one_connected_part(self):
-        self.assertEqual(len(rm.connected_components(self.adj)), 1)
+    def test_T15_main_network_connected_and_isolated_sites_have_no_links(self):
+        # tutor: sites with no shared road stay unconnected (isolated)
+        parts = sorted(rm.connected_components(self.adj), key=len, reverse=True)
+        self.assertGreater(len(parts[0]), 30)               # one big network
+        for small in parts[1:]:
+            self.assertEqual(len(small), 1)                 # the rest are single sites
+            site = next(iter(small))
+            self.assertEqual(self.adj[site], {})
 
     def test_T16_every_link_works_in_both_directions(self):
         for a, neighbours in self.adj.items():
