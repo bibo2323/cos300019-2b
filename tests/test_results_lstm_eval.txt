@@ -1,0 +1,101 @@
+test_T21_metrics_match_hand_calculation (__main__.TestEvaluation.test_T21_metrics_match_hand_calculation) ... ok
+test_T22_only_rows_predicted_by_every_model_are_compared (__main__.TestEvaluation.test_T22_only_rows_predicted_by_every_model_are_compared) ... ok
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+test_T19_train_val_test_do_not_overlap_in_time (__main__.TestLstmPipeline.test_T19_train_val_test_do_not_overlap_in_time) ... ok
+test_T20_prediction_is_valid_and_hourly_is_four_times_15min (__main__.TestLstmPipeline.test_T20_prediction_is_valid_and_hourly_is_four_times_15min) ... WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794319389.933788   21260 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794319394.509745   21260 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794319396.862632   21260 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+C:\Users\User\Documents\COS30019\cos300019-2b-main\ts_common.py:41: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+  dow = idx.dayofweek / 7.0
+ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 9.369s
+
+OK
+WARNING: 1 (site, timestamp) rows were not predicted by every model and were dropped.
