@@ -12,7 +12,7 @@ connected, so we build the links ourselves (assumptions are listed below):
           road name are lined up along that road (sorted by position) and each
           site is linked to its next neighbour on that road.
   Rule 2 (isolated sites): a site that shares no road with any other site is
-          LEFT UNCONNECTED (the tutor confirmed isolated sites are allowed).
+          LEFT UNCONNECTED (sir confirmed isolated sites are allowed).
           Set LINK_ISOLATED_SITES = True below to link them to their nearest
           sites instead (kind='assumed').
   Every link is two-way (cars can drive both directions).
