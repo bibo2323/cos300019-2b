@@ -1,0 +1,3 @@
+daytype,lstm,naive_last,hist_avg
+weekday,49.025,54.183,62.128
+weekend,44.821,47.868,77.068
