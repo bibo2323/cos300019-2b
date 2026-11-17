@@ -1,0 +1,9 @@
+
+{
+    "origin": 2000,
+    "destination": 3002,
+    "departure_date": "2006-10-28",
+    "departure_time": "08:30",
+    "prediction_model": "Random Forest",
+    "top_k": 5
+}

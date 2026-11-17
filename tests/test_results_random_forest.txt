@@ -1,0 +1,9 @@
+test_T36_valid_prediction (test_random_forest.TestRandomForest.test_T36_valid_prediction) ... ok
+test_T37_hourly_conversion (test_random_forest.TestRandomForest.test_T37_hourly_conversion) ... ok
+test_T38_insufficient_historical_data (test_random_forest.TestRandomForest.test_T38_insufficient_historical_data) ... ok
+test_T39_invalid_scats_site (test_random_forest.TestRandomForest.test_T39_invalid_scats_site) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.147s
+
+OK
