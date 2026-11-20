@@ -21,17 +21,9 @@ test_M20_route_sequence_matches_find_routes (__main__.TestRouteMap.test_M20_rout
 test_M21_travel_time_and_distance_match_find_routes (__main__.TestRouteMap.test_M21_travel_time_and_distance_match_find_routes) ... ok
 test_M22_special_cases_do_not_crash (__main__.TestRouteMap.test_M22_special_cases_do_not_crash) ... ok
 test_M23_route_through_a_site_without_valid_coordinate_is_safe (__main__.TestRouteMap.test_M23_route_through_a_site_without_valid_coordinate_is_safe) ... ok
-test_M24_returned_path_is_a_plain_string (__main__.TestRouteMap.test_M24_returned_path_is_a_plain_string) ... FAIL
-
-======================================================================
-FAIL: test_M24_returned_path_is_a_plain_string (__main__.TestRouteMap.test_M24_returned_path_is_a_plain_string)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\User\Documents\COS30019\cos300019-2b-main (1)\cos300019-2b-main\tests\test_map.py", line 229, in test_M24_returned_path_is_a_plain_string
-    self.assertIsInstance(path, str)
-AssertionError: WindowsPath('C:/Users/User/AppData/Local/Temp/tmpoz8fs67b/m24.html') is not an instance of <class 'str'>
+test_M24_returned_path_is_a_plain_string (__main__.TestRouteMap.test_M24_returned_path_is_a_plain_string) ... ok
 
 ----------------------------------------------------------------------
-Ran 24 tests in 3.414s
+Ran 24 tests in 6.761s
 
-FAILED (failures=1)
+OK
