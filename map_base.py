@@ -1,24 +1,5 @@
 """
 map_base.py - COS30019 Assignment 2B (TBRGS) - Research: map visualisation
-
-Builds the BASE MAP that Emily's route code (map_routes.py) draws on top of:
-    * street-map background (Folium) with a layer switcher
-    * every SCATS site as a marker (isolated sites in orange)
-    * the road network from edges.csv as grey lines
-
-Agreed interface (used by map_routes.py and the GUI):
-    create_base_map()  ->  (folium.Map, {site_number: (lat, lon)})
-    save_base_map(path="results/base_map.html")  ->  absolute path of the HTML file
-
-Emily: add your routes on the returned map object, e.g.
-    m, coords = create_base_map()
-    folium.PolyLine([coords[a] for a in route], color="red").add_to(m)
-The dictionary holds only sites with VALID coordinates, so look sites up with
-coords.get(site) and skip any site that is missing.
-
-Only pandas and folium are needed (no Excel, no ML libraries):
-    python -m pip install folium
-Run alone to test:   python map_base.py   then open results/base_map.html
 """
 import os
 import sys
