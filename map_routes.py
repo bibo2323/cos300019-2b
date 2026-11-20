@@ -15,7 +15,6 @@ from map_base import create_base_map
 DEFAULT_OUTPUT = "results/route_map.html"
 
 # one colour per route, route 1 first
-# one colour per route, route 1 first
 ROUTE_COLOURS = ["#d62728", "#2ca02c", "#9467bd", "#ff7f0e", "#17becf"]
 ORIGIN_COLOUR = "green"
 DESTINATION_COLOUR = "red"
