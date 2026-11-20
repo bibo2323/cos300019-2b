@@ -79,13 +79,7 @@ def _summary_box(route_result, origin, destination):
 
 def generate_route_map(route_result, output_path=DEFAULT_OUTPUT,
                        origin=None, destination=None):
-    """Draw the routes of find_routes() on the base map and save it as HTML.
-
-    route_result : the dict returned by tbrgs_routing.find_routes()
-    output_path  : where to save the HTML file
-    origin, destination : only needed when there is no route (e.g. sites not
-                   connected), so the two sites can still be marked
-    Returns the absolute path of the HTML file."""
+   
     fmap, coords = create_base_map()   # Siti's base map and the site coordinates
     routes = route_result.get("routes", [])
 
@@ -105,7 +99,6 @@ def generate_route_map(route_result, output_path=DEFAULT_OUTPUT,
     fmap.get_root().html.add_child(folium.Element(
         _summary_box(route_result, origin, destination)))
 
-    # move Siti's layer switcher to the end, or it does not see the route layers
     for key, child in list(fmap._children.items()):
         if isinstance(child, folium.LayerControl):
             del fmap._children[key]
