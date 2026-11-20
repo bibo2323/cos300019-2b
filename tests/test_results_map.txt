@@ -1,0 +1,37 @@
+test_M01_returns_folium_map_and_coordinate_dict (__main__.TestBaseMap.test_M01_returns_folium_map_and_coordinate_dict) ... ok
+test_M02_html_file_is_created_and_not_empty (__main__.TestBaseMap.test_M02_html_file_is_created_and_not_empty) ... ok
+test_M03_every_valid_site_has_the_coordinate_from_sites_csv (__main__.TestBaseMap.test_M03_every_valid_site_has_the_coordinate_from_sites_csv) ... ok
+test_M04_all_coordinates_are_inside_boroondara (__main__.TestBaseMap.test_M04_all_coordinates_are_inside_boroondara) ... ok
+test_M05_one_marker_per_site_and_one_grey_line_per_link (__main__.TestBaseMap.test_M05_one_marker_per_site_and_one_grey_line_per_link) ... ok
+test_M06_road_lines_are_grey (__main__.TestBaseMap.test_M06_road_lines_are_grey) ... ok
+test_M07_every_site_is_in_the_saved_html (__main__.TestBaseMap.test_M07_every_site_is_in_the_saved_html) ... ok
+test_M08_only_one_layer_control (__main__.TestBaseMap.test_M08_only_one_layer_control) ... ok
+test_M09_each_bad_coordinate_type_is_rejected (__main__.TestInvalidCoordinates.test_M09_each_bad_coordinate_type_is_rejected) ... ok
+test_M10_map_is_still_created_and_bad_sites_are_skipped (__main__.TestInvalidCoordinates.test_M10_map_is_still_created_and_bad_sites_are_skipped) ... ok
+test_M11_links_to_bad_sites_are_not_drawn (__main__.TestInvalidCoordinates.test_M11_links_to_bad_sites_are_not_drawn) ... ok
+test_M12_no_marker_is_placed_at_a_wrong_location (__main__.TestInvalidCoordinates.test_M12_no_marker_is_placed_at_a_wrong_location) ... ok
+test_M13_all_sites_bad_or_file_missing_gives_a_clear_error (__main__.TestInvalidCoordinates.test_M13_all_sites_bad_or_file_missing_gives_a_clear_error) ... ok
+test_M14_returns_absolute_path_of_an_existing_html_file (__main__.TestRouteMap.test_M14_returns_absolute_path_of_an_existing_html_file) ... ok
+test_M15_top_k_1_highlights_exactly_one_route (__main__.TestRouteMap.test_M15_top_k_1_highlights_exactly_one_route) ... ok
+test_M16_top_k_5_highlights_five_different_colours (__main__.TestRouteMap.test_M16_top_k_5_highlights_five_different_colours) ... ok
+test_M17_k_2_and_k_3_show_exactly_that_many_routes (__main__.TestRouteMap.test_M17_k_2_and_k_3_show_exactly_that_many_routes) ... ok
+test_M18_fewer_routes_than_k_does_not_crash (__main__.TestRouteMap.test_M18_fewer_routes_than_k_does_not_crash) ... ok
+test_M19_origin_and_destination_markers_are_correct (__main__.TestRouteMap.test_M19_origin_and_destination_markers_are_correct) ... ok
+test_M20_route_sequence_matches_find_routes (__main__.TestRouteMap.test_M20_route_sequence_matches_find_routes) ... ok
+test_M21_travel_time_and_distance_match_find_routes (__main__.TestRouteMap.test_M21_travel_time_and_distance_match_find_routes) ... ok
+test_M22_special_cases_do_not_crash (__main__.TestRouteMap.test_M22_special_cases_do_not_crash) ... ok
+test_M23_route_through_a_site_without_valid_coordinate_is_safe (__main__.TestRouteMap.test_M23_route_through_a_site_without_valid_coordinate_is_safe) ... ok
+test_M24_returned_path_is_a_plain_string (__main__.TestRouteMap.test_M24_returned_path_is_a_plain_string) ... FAIL
+
+======================================================================
+FAIL: test_M24_returned_path_is_a_plain_string (__main__.TestRouteMap.test_M24_returned_path_is_a_plain_string)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\User\Documents\COS30019\cos300019-2b-main (1)\cos300019-2b-main\tests\test_map.py", line 229, in test_M24_returned_path_is_a_plain_string
+    self.assertIsInstance(path, str)
+AssertionError: WindowsPath('C:/Users/User/AppData/Local/Temp/tmpoz8fs67b/m24.html') is not an instance of <class 'str'>
+
+----------------------------------------------------------------------
+Ran 24 tests in 3.414s
+
+FAILED (failures=1)
