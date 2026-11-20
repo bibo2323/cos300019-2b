@@ -40,8 +40,6 @@ def _segments(sites, coords):
 
 
 def _add_route(fmap, route, colour, weight, coords):
-    """Draw one route as its own layer, so it can be switched on and off
-    in Siti's layer switcher."""
     # each route is its own layer so it can be switched on and off
     label = "Route %d: %.1f min, %.2f km" % (route["rank"], route["minutes"],
                                              route["distance_km"])
@@ -62,7 +60,6 @@ def _add_end_marker(fmap, site, coords, colour, title):
 
 
 def _summary_box(route_result, origin, destination):
-    """Small box in the bottom left corner with the trip and every route."""
     # the small box in the corner: trip details and one line per route
     info = route_result.get("info", {})
     lines = ["<b>Site %s to site %s</b>" % (origin, destination),
@@ -108,7 +105,6 @@ def generate_route_map(route_result, output_path=DEFAULT_OUTPUT,
     fmap.get_root().html.add_child(folium.Element(
         _summary_box(route_result, origin, destination)))
 
-    # move Siti's layer switcher to the end, or it does not see the route layers
     for key, child in list(fmap._children.items()):
         if isinstance(child, folium.LayerControl):
             del fmap._children[key]
