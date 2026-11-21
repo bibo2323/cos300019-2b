@@ -1,4 +1,24 @@
+"""
+COS30019 - Introduction to AI
+Assignment 2B: Traffic-Based Route Guidance System
 
+File: gui.py
+Owner: Siu Han
+
+Description:
+    Implements the graphical user interface (GUI) for the
+    Traffic-Based Route Guidance System (TBRGS).
+
+    Allows users to select SCATS sites, departure date and time,
+    prediction models, and the number of recommended routes.
+
+    Integrates the team's machine learning models and route
+    search module to display predicted traffic flow, Top-K
+    routes, estimated travel times, and distances.
+
+    Includes input validation, error handling, background
+    threading, and a scrollable results display.
+"""
 import tkinter as tk
 
 from tkinter import ttk
@@ -12,12 +32,14 @@ from lstm_model import predict_flow_15min as predict_lstm_flow
 from gru_model import predict_flow_15min as predict_gru_flow
 
 from tbrgs_routing import find_routes, format_routes
+from map_routes import generate_route_map
 
 import json
 from pathlib import Path
 
 from road_map import build_adjacency, connected_components
 import threading
+import webbrowser
 
 
 # Load default settings from configuration file
@@ -34,6 +56,9 @@ root.title("Traffic-Based Route Guidance System")
 
 # Set the window size
 root.geometry("800x700")
+
+# Store the latest successful route result
+last_route_result = None
 
 # Add a title label
 title_label = tk.Label(
@@ -289,9 +314,9 @@ def get_user_inputs():
             )
 
             root.after(
-                0,
-                lambda: show_prediction_result(result_text)
-            )
+            0,
+            lambda: show_prediction_result(result_text, route_result)
+        )
 
         except Exception as error:
             error_message = str(error)
@@ -307,13 +332,26 @@ def get_user_inputs():
         daemon=True
     ).start()
 
-def show_prediction_result(result_text):
+def show_prediction_result(result_text, route_result):
+    global last_route_result
+
+    # Save the latest successful Top-K route result
+    last_route_result = route_result
+
+    # Display prediction results
     result_box.config(state="normal")
     result_box.delete("1.0", tk.END)
     result_box.insert("1.0", result_text)
     result_box.config(state="disabled")
 
+    # Restore the Predict Traffic button
     check_button.config(state="normal", text="Predict Traffic")
+
+        # Enable View Map when routes are available
+    if route_result.get("routes"):
+        view_map_button.config(state="normal")
+    else:
+        view_map_button.config(state="disabled")
 
 
 def show_prediction_error(error_message):
@@ -334,10 +372,44 @@ def show_prediction_error(error_message):
 
 # Clear previous prediction results
 def clear_prediction_result():
+    global last_route_result
+
+    # Clear the previous route data
+    last_route_result = None
+
+    # Disable View Map
+    view_map_button.config(state="disabled")
+
+    # Clear previous prediction results
     result_box.config(state="normal")
     result_box.delete("1.0", tk.END)
     result_box.insert("1.0", "No valid prediction available.")
     result_box.config(state="disabled")
+
+# Open the latest predicted routes on an interactive map
+def open_route_map():
+    if last_route_result is None or not last_route_result.get("routes"):
+        messagebox.showwarning(
+            "No Routes",
+            "Please predict a route first."
+        )
+        return
+
+    try:
+        # Generate the interactive HTML map
+        html_file = generate_route_map(last_route_result)
+
+        # Convert the file path to a browser URL
+        map_url = Path(html_file).resolve().as_uri()
+
+        # Open the map in the default browser
+        webbrowser.open(map_url)
+
+    except Exception as error:
+        messagebox.showerror(
+            "Map Error",
+            str(error)
+        )
 
 # Check whether two SCATS sites are connected
 def check_route_connection():
@@ -414,6 +486,18 @@ route_button = tk.Button(
 )
 
 route_button.pack(pady=5)
+
+# Button to open the interactive route map
+view_map_button = tk.Button(
+    root,
+    text="View Map",
+    font=("Arial", 12, "bold"),
+    command=open_route_map,
+    width=22,
+    state="disabled"
+)
+
+view_map_button.pack(pady=5)
 
 # Create a frame for displaying prediction results
 result_frame = tk.LabelFrame(

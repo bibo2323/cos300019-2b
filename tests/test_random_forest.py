@@ -1,4 +1,23 @@
+"""
+COS30019 - Introduction to AI
+Assignment 2B: Traffic-Based Route Guidance System
 
+File: tests/test_random_forest.py
+Owner: Siu Han
+
+Description:
+    Contains automated unit tests for the Random Forest
+    traffic prediction model.
+
+    Test Cases:
+        T36 - Valid traffic flow prediction
+        T37 - Hourly traffic flow conversion
+        T38 - Insufficient historical traffic data
+        T39 - Invalid SCATS site
+
+    Uses Python's unittest framework to verify model
+    prediction behaviour and input handling.
+"""
 import os
 import sys
 import unittest

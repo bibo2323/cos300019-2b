@@ -1,4 +1,23 @@
+"""
+COS30019 - Introduction to AI
+Assignment 2B: Traffic-Based Route Guidance System
 
+File: random_forest_model.py
+Owner: Siu Han
+
+Description:
+    Implements the Random Forest Regressor for traffic
+    flow prediction using the Boroondara SCATS dataset.
+
+    Uses the previous 12 traffic intervals (3 hours)
+    to predict traffic flow for the next 15 minutes.
+
+    Includes model training, validation, testing,
+    performance evaluation, and model saving/loading.
+
+    Provides prediction functions for integration
+    with the TBRGS route guidance system.
+"""
 import numpy as np
 import os
 import json
